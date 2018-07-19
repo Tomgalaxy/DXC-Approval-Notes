@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="4b0a5682db531300c637aab35b9619f1" sys_domain="global" table="x_245885_dxc_appro_approval_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:09:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c30a5682db531300c637aab35b9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_245885_dxc_appro_approval_request" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="0fc9d282db531300c637aab35b9619ef">4b0a5682db531300c637aab35b9619f1</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="0fc9d282db531300c637aab35b9619ef">dfc99a82db531300c637aab35b961977</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:09:57</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:09:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>870a5682db531300c637aab35b9619f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_245885_dxc_appro_approval_request" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="0fc9d282db531300c637aab35b9619ef">4b0a5682db531300c637aab35b9619f1</sys_ui_form>
+            <sys_ui_section caption="Comments" display_value="Comments" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="0fc9d282db531300c637aab35b9619ef">8b0a5682db531300c637aab35b9619f2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:09:57</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_245885_dxc_appro_approval_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:09:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4b0a5682db531300c637aab35b9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_245885_dxc_appro_approval_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
+            <sys_update_name>sys_ui_form_sections_4b0a5682db531300c637aab35b9619f1</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:09:57</sys_updated_on>
+            <sys_user/>
+            <view display_value="DXCView" name="dxcview">0fc9d282db531300c637aab35b9619ef</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

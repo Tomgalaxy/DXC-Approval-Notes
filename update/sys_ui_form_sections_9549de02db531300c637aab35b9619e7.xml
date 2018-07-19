@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="9549de02db531300c637aab35b9619e7" sys_domain="global" table="x_245885_dxc_appro_approval_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:06:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6149de02db531300c637aab35b9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_245885_dxc_appro_approval_request" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">9549de02db531300c637aab35b9619e7</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">37430286db131300c637aab35b96199c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:06:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:06:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e549de02db531300c637aab35b9619e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_245885_dxc_appro_approval_request" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">9549de02db531300c637aab35b9619e7</sys_ui_form>
+            <sys_ui_section caption="Comments" display_value="Comments" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">a949de02db531300c637aab35b9619e8</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:06:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:07:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c699682db531300c637aab35b96196b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_245885_dxc_appro_approval_request" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">9549de02db531300c637aab35b9619e7</sys_ui_form>
+            <sys_ui_section caption="Conditions" display_value="Conditions" name="x_245885_dxc_appro_approval_request" sys_domain="global" view="Default view">b4691e42db531300c637aab35b96195b</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:07:04</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_245885_dxc_appro_approval_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-07-16 04:06:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9549de02db531300c637aab35b9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_245885_dxc_appro_approval_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
+            <sys_update_name>sys_ui_form_sections_9549de02db531300c637aab35b9619e7</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-07-16 04:06:34</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
