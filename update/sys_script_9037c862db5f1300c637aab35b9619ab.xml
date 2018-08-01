@@ -13,7 +13,7 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_245885_dxc_appro_approval_request</collection>
-        <condition/>
+        <condition>current.isNewRecord()</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition table="x_245885_dxc_appro_approval_request">lbuISEMPTY^EQ<item endquery="false" field="lbu" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
@@ -31,17 +31,31 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
+	
 	// Add your code here
 	
 	//Get current user's "country" info (string)
 	var userCountry = current.submitted_by.location.country;
-    var getlbu = new GlideRecord('x_245885_dxc_appro_local_business_units') ;
+	
 	//Find a record in LBU table that satisfy the equation
+	var getlbu = new GlideRecord('x_245885_dxc_appro_local_business_units') ;
+	
+	var fRate = new GlideRecord('fx_rate');
 	//(user's country = LBU.country.name)
 	getlbu.get('country.name', userCountry);
-	gs.info(getlbu.sys_id);
+	current.lbu = getlbu.sys_id;
+	
+	//local currency field initialization
+	
+	current.local_currency = current.lbu.default_currency;
 	g_scratchpad.location = getlbu.sys_id;
+	
+	//exchange rate field initialization
+	fRate.orderByDesc('created');
+	fRate.addQuery('currency', current.local_currency);
+	fRate.query();
+	fRate.next();
+	current.exchange_rate = fRate.rate;
 	
 	//test something
 	
@@ -52,7 +66,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9037c862db5f1300c637aab35b9619ab</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>GetLUB</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
@@ -60,7 +74,7 @@
         <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
         <sys_update_name>sys_script_9037c862db5f1300c637aab35b9619ab</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-19 02:36:17</sys_updated_on>
+        <sys_updated_on>2018-07-19 04:28:20</sys_updated_on>
         <template/>
         <when>before_display</when>
     </sys_script>
