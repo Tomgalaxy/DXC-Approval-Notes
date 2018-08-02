@@ -4,8 +4,8 @@
         <action_name>save</action_name>
         <active>true</active>
         <client>false</client>
-        <comments/>
-        <condition/>
+        <comments>show button save if sate is 'draft' or state is 'new' and have role 'Employee' </comments>
+        <condition>(current.state == 'Draft' || current.state == 'New') &amp;&amp; gs.hasRole('x_245885_dxc_appro.DXC Employee')</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -23,7 +23,10 @@
         <name>Save</name>
         <onclick/>
         <order>300</order>
-        <script/>
+        <script><![CDATA[current.state = 'Draft';
+
+current.update();
+action.setRedirectURL(current);]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -34,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c5c19b02dbd31300c637aab35b9619de</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Save</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
@@ -42,7 +45,7 @@
         <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
         <sys_update_name>sys_ui_action_c5c19b02dbd31300c637aab35b9619de</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-16 08:13:49</sys_updated_on>
+        <sys_updated_on>2018-08-02 08:17:41</sys_updated_on>
         <table>x_245885_dxc_appro_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
