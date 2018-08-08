@@ -4,8 +4,9 @@
         <action_name>recall</action_name>
         <active>true</active>
         <client>false</client>
-        <comments/>
-        <condition/>
+        <comments>state == 'WaitingLeader' and has role employee and button('Reviewing') == false&#13;
+state = 'draft'</comments>
+        <condition>current.reviewing == false  &amp;&amp; current.state == 'WaitingLeader' &amp;&amp; gs.hasRole('x_245885_dxc_appro.DXC Employee') &amp;&amp; current.submitted_by == gs.getUserID()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -23,7 +24,11 @@
         <name>Recall</name>
         <onclick/>
         <order>500</order>
-        <script/>
+        <script><![CDATA[current.state = 'Draft';
+
+current.update();
+
+action.setRedirectURL(current);]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -34,7 +39,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>64025382dbd31300c637aab35b961958</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Recall</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
@@ -42,7 +47,7 @@
         <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
         <sys_update_name>sys_ui_action_64025382dbd31300c637aab35b961958</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-16 08:14:47</sys_updated_on>
+        <sys_updated_on>2018-08-08 03:29:19</sys_updated_on>
         <table>x_245885_dxc_appro_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

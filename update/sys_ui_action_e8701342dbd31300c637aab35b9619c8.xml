@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>submit_new_newVer1.0</action_name>
+        <action_name>sysverb_insert</action_name>
         <active>true</active>
-        <client>true</client>
-        <comments/>
-        <condition/>
+        <client>false</client>
+        <comments>if has role =('Employee') and has state = draft =&gt; submit</comments>
+        <condition>current.state == 'Draft' </condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_context_menu>false</form_context_menu>
@@ -20,20 +20,29 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Submit_V1.0</name>
+        <name>Submit</name>
         <onclick>onClickSubmit()</onclick>
         <order>100</order>
-        <script><![CDATA[function onClickSubmit(){
-	if (g_form.getValue('state') == 'Draft' && g_form.getValue('level_of_approval') == 'Leader'){
-		current.setValue('WaitingLeader');
-		return;
-	}
+        <script><![CDATA[// function onClickSubmit(){
+// 	if (g_form.getValue('state') == 'Draft' && g_form.getValue('level_of_approval') == 'Leader'){
+// 		current.setValue('WaitingLeader');
+// 		return;
+// 	}
 	
-	if (g_form.getValue('state') == 'Draft' && g_form.getValue('level_of_approval') == 'LeaderPM'){
-		current.serValue('WaitingPMApproval');
-		return;
-	}
-}]]></script>
+// 	if (g_form.getValue('state') == 'Draft' && g_form.getValue('level_of_approval') == 'LeaderPM'){
+// 		current.serValue('WaitingPMApproval');
+// 		return;
+// 	}
+// }
+
+if (current.level_of_approval == 'Leader' || (current.level_of_approval == 'LeaderPM' && current.leader_agree == false)) {
+	
+	current.state = 'WaitingLeader';
+	gs.addInfoMessage(current.state);
+} else if(current.level_of_approval == 'LeaderPM' && current.leader_agree == true)  {
+	current.state = 'WaitingPMApproval';
+}
+current.update();]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -44,15 +53,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e8701342dbd31300c637aab35b9619c8</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Submit_V1.0</sys_name>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Submit</sys_name>
         <sys_overrides/>
         <sys_package display_value="DXC Approval Note" source="x_245885_dxc_appro">f9523781dbd31300c637aab35b961954</sys_package>
         <sys_policy/>
         <sys_scope display_value="DXC Approval Note">f9523781dbd31300c637aab35b961954</sys_scope>
         <sys_update_name>sys_ui_action_e8701342dbd31300c637aab35b9619c8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-07-30 08:21:24</sys_updated_on>
+        <sys_updated_on>2018-08-08 03:24:34</sys_updated_on>
         <table>x_245885_dxc_appro_approval_request</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
